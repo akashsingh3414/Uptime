@@ -24,6 +24,8 @@ model Website {
   url String @unique
   userId String
   ticks WebsiteTick[]
+
+  disabled Boolean @default(false)
 }
 
 model Validator {
