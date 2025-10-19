@@ -6,7 +6,9 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  // Write generated client into the repo root node_modules so imports of
+  // `@prisma/client` (from the monorepo root) find their runtime.
+  output   = "../../../node_modules/.prisma/client"
 }
 
 datasource db {
